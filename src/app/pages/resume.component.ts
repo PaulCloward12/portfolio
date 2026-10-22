@@ -8,8 +8,7 @@ import { Component } from '@angular/core';
       <p class="section-label">Resume</p>
       <h1>Resume</h1>
       <p>Download the current PDF resume.</p>
-      <a href="/assets/paul-cloward-resume.pdf" class="btn btn-primary" download>Download PDF</a>
-      <p class="note">Placeholder path. Replace with the real file when available.</p>
+      <a href="/assets/paul-cloward-resume.pdf" class="btn btn-primary" download="paul-cloward-resume.pdf">Download PDF</a>      <p class="note">Placeholder path. Replace with the real file when available.</p>
     </section>
   `,
   styles: [`
