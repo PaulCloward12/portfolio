@@ -7,16 +7,16 @@ import { PROJECTS } from '../core/projects';
   standalone: true,
   imports: [RouterLink],
   template: `
-    <section class="hero">
-      <div class="container">
-        <p class="section-label">Paul Randal</p>
-        <h1>Founding software engineer. Architect of a full remote health-monitoring platform. Building again.</h1>
+    <section class="container hero">
+      
+        <p class="section-label">Paul Cloward</p>
+        <h1>Software engineer. Architect of a full remote health-monitoring platform. Building again.</h1>
         <p class="open">Open to senior full-stack, Android, and solutions-engineering roles.</p>
         <div class="ctas">
           <a routerLink="/projects" class="btn btn-primary">View projects</a>
           <a routerLink="/contact" class="btn btn-secondary">Contact</a>
         </div>
-      </div>
+    
     </section>
 
     <section class="featured">
@@ -39,9 +39,9 @@ import { PROJECTS } from '../core/projects';
       </div>
     </section>
   `,
-  styles: [`
+  styles: [` 
     .hero {
-      padding: 4rem 0 3rem;
+    padding: 3rem 0 4rem;
     }
     .hero h1 {
       max-width: 18ch;

@@ -11,7 +11,7 @@ import { ThemeService } from '../core/theme.service';
       <div class="container header-inner">
         <a routerLink="/" class="logo">PC</a>
         <nav class="nav" [class.open]="menuOpen()">
-          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          <!-- <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a> -->
           <a routerLink="/about" routerLinkActive="active">About</a>
           <a routerLink="/skills" routerLinkActive="active">Skills</a>
           <a routerLink="/projects" routerLinkActive="active">Projects</a>

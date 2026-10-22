@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
       <ul class="links">
         <li><a href="mailto:paul@example.com">paul@example.com</a></li>
         <li><a href="https://github.com/PaulCloward" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/paulrandal" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://linkedin.com/in/paulcloward" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
       <p class="note">Placeholders — replace with real contact details.</p>
     </section>
