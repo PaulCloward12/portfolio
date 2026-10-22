@@ -17,6 +17,7 @@
     "@angular/forms": "^22.2.0",
     "@angular/platform-browser": "^22.2.0",
     "@angular/router": "^22.2.0",
+    "firebase": "^12.19.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -31,12 +32,16 @@
     "@parcel/watcher@2.6.0": true,
     "esbuild@0.28.2": true,
     "msgpackr-extract@3.0.4": true,
-    "lmdb@3.5.6": true
+    "lmdb@3.5.6": true,
+    "@firebase/util@1.15.3": true,
+    "protobufjs": false
   },
   "overrides": {
     "vite": "8.3.5",
     "@angular/build": {
       "vite": "8.3.5"
-    }
+    },
+    "@grpc/grpc-js": ">=1.14.5",
+    "protobufjs": ">=7.5.5"
   }
 }

@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
       <h1>Get in touch</h1>
       <p>Open to senior full-stack, Android, mobile, or solutions-engineering roles. Remote or relocation from Utah is fine.</p>
       <ul class="links">
-        <li><a href="mailto:paul@example.com">paul@example.com</a></li>
+        <li><a href="mailto:paulcloward12@gmail.com">paulcloward12@gmail.com</a></li>
         <li><a href="https://github.com/PaulCloward" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://linkedin.com/in/paulcloward" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>

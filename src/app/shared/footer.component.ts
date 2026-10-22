@@ -40,7 +40,7 @@ import { RouterLink } from '@angular/router';
           <a href="https://x.com/PaulCloward" target="_blank" rel="noopener" aria-label="X">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="mailto:paul@example.com" aria-label="Email">
+          <a href="mailto:paulcloward12@gmail.com" aria-label="Email">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908z"/></svg>
           </a>
         </div>
@@ -110,7 +110,6 @@ import { RouterLink } from '@angular/router';
       font-size: 0.75rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      border: 1px solid green;
     }
 
     .footer-nav a {

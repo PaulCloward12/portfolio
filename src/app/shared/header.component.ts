@@ -16,7 +16,7 @@ import { ThemeService } from '../core/theme.service';
           <a routerLink="/skills" routerLinkActive="active">Skills</a>
           <a routerLink="/projects" routerLinkActive="active">Projects</a>
           <a routerLink="/resume" routerLinkActive="active">Resume</a>
-          <a routerLink="/blog" routerLinkActive="active">Blog</a>
+          <!-- <a routerLink="/blog" routerLinkActive="active">Blog</a> -->
           <a routerLink="/contact" routerLinkActive="active">Contact</a>
         </nav>
         <div class="header-actions">
@@ -42,14 +42,24 @@ import { ThemeService } from '../core/theme.service';
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 72px;
+      min-width: 100%;
     }
     .logo {
       font-family: var(--font-display);
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--ink);
       text-decoration: none;
+      border: 2px solid var(--accent);;
+      padding: .2rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
     }
     .nav {
       display: flex;
