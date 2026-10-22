@@ -1,4 +1,4 @@
-# Paul Randal — Portfolio
+# Paul Cloward — Portfolio
 
 Professional portfolio site built with Angular 22 (standalone components, zoneless, OnPush by default).
 
