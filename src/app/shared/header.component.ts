@@ -9,7 +9,7 @@ import { ThemeService } from '../core/theme.service';
   template: `
     <header class="header">
       <div class="container header-inner">
-        <a routerLink="/" class="logo">PR</a>
+        <a routerLink="/" class="logo">PC</a>
         <nav class="nav" [class.open]="menuOpen()">
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
           <a routerLink="/about" routerLinkActive="active">About</a>
