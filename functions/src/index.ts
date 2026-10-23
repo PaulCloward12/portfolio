@@ -8,6 +8,8 @@
  */
 
 import {setGlobalOptions} from "firebase-functions";
+import { onCall, HttpsError } from "firebase-functions/v2/https";
+import * as logger from "firebase-functions/logger";
 // import {onRequest} from "firebase-functions/https";
 // import * as logger from "firebase-functions/logger";
 
@@ -30,3 +32,15 @@ setGlobalOptions({maxInstances: 10});
 //   logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
+
+export const sendContactMessage = onCall(async (request) => {
+  const { name, email, message } = request.data;
+
+  if (!name || !email || !message) {
+    throw new HttpsError("invalid-argument", "Name, email, and message are required.");
+  }
+
+  logger.info("New contact message", { name, email, message });
+
+  return { success: true, received: { name, email, messageLength: message.length } };
+});
