@@ -28,6 +28,5 @@ export const sendContactMessage = onCall(async (request) => {
   });
 
   logger.info("New contact message saved", {name, email});
-
   return {success: true};
 });
