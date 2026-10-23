@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from 'firebase/app-check';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -11,5 +12,13 @@ const firebaseConfig = {
   measurementId: 'G-KWT7LFXHP0',
 };
 
+// Keep a singleton db for the rest of the app
 const app = initializeApp(firebaseConfig);
+
+// App Check – must run before other Firebase services
+initializeAppCheck(app, {
+  provider: new ReCaptchaEnterpriseProvider('YOUR_RECAPTCHA_ENTERPRISE_SITE_KEY'),
+  isTokenAutoRefreshEnabled: true,
+});
+
 export const db = getFirestore(app);
