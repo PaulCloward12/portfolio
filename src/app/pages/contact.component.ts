@@ -52,12 +52,20 @@ import { functions } from '../firebase';
       <h1>Get in touch</h1>
 
       <form (ngSubmit)="submit()">
-        <input [(ngModel)]="name" name="name" placeholder="Your name" required>
-        <input [(ngModel)]="email" name="email" type="email" placeholder="Email" required>
-        <textarea [(ngModel)]="message" name="message" placeholder="Message" required></textarea>
-        <button type="submit" [disabled]="sending()">
-          {{ sending() ? 'Sending…' : 'Send' }}
-        </button>
+        <section>
+          <input [(ngModel)]="name" name="name" placeholder="Your name" required>
+        </section>
+        <section>
+            <input [(ngModel)]="email" name="email" type="email" placeholder="Email" required>
+        </section>
+        <section>
+            <textarea [(ngModel)]="message" name="message" placeholder="Message" required style="resize: none"></textarea>
+        </section>
+        <section>
+            <button type="submit" [disabled]="sending()">
+              {{ sending() ? 'Sending…' : 'Send' }}
+            </button>
+        </section>
       </form>
 
       @if (status()) {
