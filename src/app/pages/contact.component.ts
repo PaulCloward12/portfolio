@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -35,3 +35,67 @@ import { Component } from '@angular/core';
   `]
 })
 export class ContactComponent {}
+*/
+
+import { Component, inject, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { httpsCallable } from 'firebase/functions';
+import { functions } from '../firebase';
+
+@Component({
+  selector: 'app-contact',
+  standalone: true,
+  imports: [FormsModule],
+  template: `
+    <section class="container page">
+      <p class="section-label">Contact</p>
+      <h1>Get in touch</h1>
+
+      <form (ngSubmit)="submit()">
+        <input [(ngModel)]="name" name="name" placeholder="Your name" required>
+        <input [(ngModel)]="email" name="email" type="email" placeholder="Email" required>
+        <textarea [(ngModel)]="message" name="message" placeholder="Message" required></textarea>
+        <button type="submit" [disabled]="sending()">
+          {{ sending() ? 'Sending…' : 'Send' }}
+        </button>
+      </form>
+
+      @if (status()) {
+        <p>{{ status() }}</p>
+      }
+    </section>
+  `
+})
+export class ContactComponent {
+
+  name = '';
+  email = '';
+  message = '';
+  sending = signal(false);
+  status = signal('');
+
+  async submit() {
+    this.sending.set(true);
+    this.status.set('');
+
+    try {
+      const callable = httpsCallable<
+        { name: string; email: string; message: string },
+        { success: boolean }
+      >(functions, 'sendContactMessage');
+
+      const result = await callable({
+        name: this.name,
+        email: this.email,
+        message: this.message
+      });
+
+      this.status.set('Message sent successfully.');
+      this.name = this.email = this.message = '';
+    } catch (err: any) {
+      this.status.set(err.message || 'Failed to send message.');
+    } finally {
+      this.sending.set(false);
+    }
+  }
+}
