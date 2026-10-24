@@ -10,13 +10,13 @@ import { ThemeService } from '../core/theme.service';
     <header class="header">
       <div class="container header-inner">
         <a routerLink="/" class="logo">PC</a>
-        <nav class="nav" [class.open]="menuOpen()">
-          <!-- <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a> -->
+        <nav class="nav" [class.open]="menuOpen()" (click)="menuOpen.set(false)">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
           <a routerLink="/about" routerLinkActive="active">About</a>
           <a routerLink="/skills" routerLinkActive="active">Skills</a>
           <a routerLink="/projects" routerLinkActive="active">Projects</a>
           <a routerLink="/resume" routerLinkActive="active">Resume</a>
-          <!-- <a routerLink="/blog" routerLinkActive="active">Blog</a> -->
+          <a routerLink="/blog" routerLinkActive="active">Blog</a>
           <a routerLink="/contact" routerLinkActive="active">Contact</a>
         </nav>
         <div class="header-actions">
@@ -64,6 +64,9 @@ import { ThemeService } from '../core/theme.service';
     .nav {
       display: flex;
       gap: 1.5rem;
+      margin-left: auto;
+      margin-right: 4rem;
+
     }
     .nav a {
       color: var(--ink);
@@ -122,6 +125,7 @@ import { ThemeService } from '../core/theme.service';
         padding: 1rem 1.25rem;
         border-bottom: 1px solid var(--line);
         gap: 0;
+        margin-right: 0;
       }
       .nav.open {
         display: flex;

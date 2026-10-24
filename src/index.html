@@ -14,10 +14,10 @@
   <script>
     (function() {
       const stored = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (stored === 'dark' || (!stored && prefersDark)) {
-        document.documentElement.classList.add('dark');
-      }
+      document.documentElement.classList.toggle(
+        'dark',
+        stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      );
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
