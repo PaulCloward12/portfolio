@@ -72,7 +72,24 @@ import { functions } from '../firebase';
         <p>{{ status() }}</p>
       }
     </section>
-  `
+  `,
+  styles: [`
+    .page {
+      padding: 3rem 2rem 4rem;
+    }
+    .links {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    .links li {
+      margin-bottom: 0.5rem;
+    }
+    .note {
+      color: var(--ink-dim);
+      font-size: 0.875rem;
+    }
+  `]
 })
 export class ContactComponent {
 

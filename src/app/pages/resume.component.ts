@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
   `,
   styles: [`
     .page {
-      padding: 3rem 0 4rem;
+      padding: 3rem 2rem 4rem;
     }
     .note {
       margin-top: 1rem;

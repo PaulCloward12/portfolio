@@ -38,7 +38,7 @@ interface SkillGroup {
   `,
   styles: [`
     .page {
-      padding: 3rem 0 4rem;
+      padding: 3rem 2rem 4rem;
     }
 
     .skills-card {

@@ -41,7 +41,7 @@ import { PROJECTS } from '../core/projects';
   `,
   styles: [` 
     .hero {
-    padding: 3rem 0 4rem;
+    padding: 3rem 2rem 4rem;
     }
     .hero h1 {
       max-width: 18ch;

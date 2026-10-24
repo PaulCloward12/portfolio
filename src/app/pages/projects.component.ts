@@ -27,7 +27,7 @@ import { PROJECTS } from '../core/projects';
   `,
   styles: [`
     .page {
-      padding: 3rem 0 4rem;
+      padding: 3rem 2rem 4rem;
     }
     .grid {
       display: grid;
